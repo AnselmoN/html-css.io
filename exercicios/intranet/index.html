@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Intranet do Conselho Regional de Farmácia</title>
+</head>
+<body>
+    <h1>Bem-vindo à Intranet do CRF</h1>
+    <h2>Lista de Membros:</h2>
+    <ul>
+        {% for membro in membros %}
+        <li><a href="{{ url_for('perfil', id=loop.index0) }}">{{ membro.nome }} - {{ membro.cargo }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
